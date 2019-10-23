@@ -1,0 +1,45 @@
+Coculescu Gabriel 315 CA
+                           README Poli Tic Tac Toe
+ PRECIZARE:Matricea a este boardul iar b este macroboardul.
+In rezolvarea problemei am facut mai multe functii.
+1) Functia validarepoz verifica daca indicii x si y din citire sunt valizi.
+2) Functia miniboard ce are ca parametrii boardul a,macroboardul b,n ce 
+reprezinta linia si coloana de final a boardului, x si y care reprezinta indicii
+din citire si k care retine daca mutarea facuta a dus la castigarea miniboar-
+dului .
+Intai verific daca miniboardul nu era deja castigat apoi calculez linia si co-
+loana de inceput a miniboardului,cat si linia si coloana corespunzatoare 
+macroboardului.Urmeaza sa verific daca mutarea facuta duce la completarea unei 
+linii colone sau diagonale(pasii sunt explicati in cod).In cazul in care mini-
+boardul este castigator se completeteza macroboardul cu castigatorul si k devine
+1,arata ca mutarea a fost castigatoare.
+3) Functia adaug cu parmaterii boardul a,n ce reprezinta linia si coloana de 
+final a boardului *x si *y unde se vor retine noii indici ,ch care reprezinta 
+caracterul citit si *ok care verifica daca boardul este sau nu plin.
+Se face o parcurgere a diagonalelor de deasupra si de desubtul celei principale
+si daca se gaseste un loc liber se aduga caracterul ch *x si *y si ok se face 0.
+4) Functia umplere ce are ca parametrii boardul a,macroboardul b,n ce reprezinta
+linia si coloana de final a boardului x ,m care reprezinat numarul liniilor si 
+coloanelor macroboardului *n1 si *n2 care reprezinta numarul mutarilor ce duc 
+la castigarea unui miniboard.
+Se citesc indicii x si y si jucatorul(X sau 0) ,apoi se verifica daca se res-
+pecta ordinea jucatorilor si daca indicii sunt valizi.Daca sunt valizi apelez
+functia miniboard si in cazul in care mutarea duce la castigarea miniboardului
+cresc pe *n1 respectiv pe *n2.ok2 verifica daca trebuie apelata functia adaug
+(in cazul in care indicii sunt invalizi sau daca celula este ocupata).Se adauga 
+caracterul in a si cu functia miniboard se construieste si b.ok1 verifica daca 
+boardul este plin.
+5) Functia macroboard cu parametrii macroboardul b ,n numarul linilor si coloa-
+nelor macroboardului si *nr1 si *nr2 care numara victorile lui X si 0.
+Se parcurge b pe linii,coloane si diagonale.In cazul in care un jucator comple-
+teaza o linie,coloana sau diagonala(okx si ok0 verifica acest lucru) *nr1 si 
+*nr2 cresc.
+6) In int main() umplu matricele a cu 1 resp b cu - si apelez functia umplere.
+Apoi afisez elementele macroboardului b . Urmeaza sa apelez functia macroboard 
+in urma careia voi stabili castigatorul jocului.Apoi numar mutarile facute de X
+respectiv 0 din board (nr0 si nrx).Numarul mutarilor castigatoare sunt calculate
+in functia umplere(nrxc,nroc).La final calculez si afisez indicii de atentie. 
+
+
+
+
